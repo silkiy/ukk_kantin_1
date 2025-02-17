@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:ukk_kantin_riga/pages/student/auth/registrasi_page_student.dart';
 
+import '../home_page_student.dart';
+
 class LoginPageStudent extends StatefulWidget {
   const LoginPageStudent({super.key});
 
@@ -116,7 +118,14 @@ class _LoginPageStudentState extends State<LoginPageStudent> {
               ),
               SizedBox(height: MediaQuery.of(context).size.width * 0.2),
               GestureDetector(
-                onTap: () async {},
+                onTap: () async {
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => HomePageStudent(),
+                    ),
+                  );
+                },
                 child: Container(
                   height: MediaQuery.of(context).size.width * 0.14,
                   decoration: BoxDecoration(
