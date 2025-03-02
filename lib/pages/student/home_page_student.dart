@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:ukk_kantin_riga/components/bottom_nav_bar_student.dart';
 
 import '../../components/header_home_page.dart';
 import '../../components/stand_card.dart';
@@ -70,7 +71,7 @@ class _HomePageStudentState extends State<HomePageStudent> {
               ),
             ),
             SizedBox(
-              height: MediaQuery.of(context).size.height ,
+              height: MediaQuery.of(context).size.height,
               child: GridView.builder(
                 shrinkWrap: true,
                 physics: AlwaysScrollableScrollPhysics(),
@@ -93,7 +94,7 @@ class _HomePageStudentState extends State<HomePageStudent> {
           ],
         ),
       ),
+      bottomNavigationBar: BottomNavBarStudent(selectedItem: 0),
     );
   }
 }
-
